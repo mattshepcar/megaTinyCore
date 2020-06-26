@@ -1,3 +1,6 @@
 [submodule "cores/test/external/libvireg"]
 	path = cores/test/external/libvireg
 	url = https://github.com/bcmi-labs/libvireg
+[submodule "megaavr/libraries/megaTinyRF24Boot"]
+	path = megaavr/libraries/megaTinyRF24Boot
+	url = https://github.com/mattshepcar/megaTinyRF24Boot.git

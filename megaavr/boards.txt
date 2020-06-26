@@ -1146,6 +1146,133 @@ atxy4o.menu.resetpin.gpio=IO (DANGER - Read docs first! powercycle to enter boot
 atxy4o.menu.resetpin.gpio.bootloader.file=optiboot_x/optiboot_txy2{bootloader.uartswap}.hex
 atxy4o.menu.resetpin.gpio.bootloader.resetpinbits=00
 
+##############################################################
+
+atxy4rf.name=ATtiny1614/1604/814/804/414/404/214/204 (nRF24L01+ boot)
+atxy4rf.upload.speed=500000
+
+atxy4rf.menu.chip.1614=ATtiny1614
+atxy4rf.menu.chip.1614.build.mcu=attiny1614
+atxy4rf.menu.chip.1614.upload.maximum_size=16384
+atxy4rf.menu.chip.1614.upload.maximum_data_size=2048
+atxy4rf.menu.chip.814=ATtiny814
+atxy4rf.menu.chip.814.build.mcu=attiny814
+atxy4rf.menu.chip.814.upload.maximum_size=8192
+atxy4rf.menu.chip.814.upload.maximum_data_size=512
+atxy4rf.menu.chip.414=ATtiny414
+atxy4rf.menu.chip.414.build.mcu=attiny414
+atxy4rf.menu.chip.414.upload.maximum_size=4096
+atxy4rf.menu.chip.414.upload.maximum_data_size=256
+atxy4rf.menu.chip.214=ATtiny214
+atxy4rf.menu.chip.214.build.mcu=attiny214
+atxy4rf.menu.chip.214.upload.maximum_size=2048
+atxy4rf.menu.chip.214.upload.maximum_data_size=128
+atxy4rf.menu.chip.1604=ATtiny1604
+atxy4rf.menu.chip.1604.build.mcu=attiny1604
+atxy4rf.menu.chip.1604.upload.maximum_size=16384
+atxy4rf.menu.chip.1604.upload.maximum_data_size=1024
+atxy4rf.menu.chip.804=ATtiny804
+atxy4rf.menu.chip.804.build.mcu=attiny804
+atxy4rf.menu.chip.804.upload.maximum_size=8192
+atxy4rf.menu.chip.804.upload.maximum_data_size=512
+atxy4rf.menu.chip.404=ATtiny404
+atxy4rf.menu.chip.404.build.mcu=attiny404
+atxy4rf.menu.chip.404.upload.maximum_size=4096
+atxy4rf.menu.chip.404.upload.maximum_data_size=256
+atxy4rf.menu.chip.204=ATtiny204
+atxy4rf.menu.chip.204.build.mcu=attiny204
+atxy4rf.menu.chip.204.upload.maximum_size=2048
+atxy4rf.menu.chip.204.upload.maximum_data_size=128
+
+atxy4rf.menu.clock.20=20 MHz
+atxy4rf.menu.clock.16=16 MHz
+atxy4rf.menu.clock.10=10 MHz
+atxy4rf.menu.clock.8=8 MHz
+atxy4rf.menu.clock.5=5 MHz
+atxy4rf.menu.clock.4=4 MHz
+atxy4rf.menu.clock.1=1 MHz
+atxy4rf.menu.clock.20.build.f_cpu=20000000L
+atxy4rf.menu.clock.16.build.f_cpu=16000000L
+atxy4rf.menu.clock.10.build.f_cpu=10000000L
+atxy4rf.menu.clock.8.build.f_cpu=8000000L
+atxy4rf.menu.clock.5.build.f_cpu=5000000L
+atxy4rf.menu.clock.4.build.f_cpu=4000000L
+atxy4rf.menu.clock.1.build.f_cpu=1000000L
+atxy4rf.menu.clock.20.bootloader.OSCCFG=0x02
+atxy4rf.menu.clock.16.bootloader.OSCCFG=0x01
+atxy4rf.menu.clock.10.bootloader.OSCCFG=0x02
+atxy4rf.menu.clock.8.bootloader.OSCCFG=0x01
+atxy4rf.menu.clock.5.bootloader.OSCCFG=0x02
+atxy4rf.menu.clock.4.bootloader.OSCCFG=0x01
+atxy4rf.menu.clock.1.bootloader.OSCCFG=0x01
+
+
+atxy4rf.menu.millis.enabled=Enabled (default timer)
+atxy4rf.menu.millis.disabled=Disabled (saves flash)
+atxy4rf.menu.millis.timera=TCA0 (default on 0-series)
+atxy4rf.menu.millis.timerd=TCD0 (1-series only, default there)
+atxy4rf.menu.millis.timerb0=TCB0 (breaks tone() and Servo)
+atxy4rf.menu.millis.timerb1=TCB1 (1614 only)
+atxy4rf.menu.millis.rtc=RTC (no micros)
+atxy4rf.menu.millis.rtcxtal=RTC w/w32khz xtal (no micros)
+atxy4rf.menu.millis.enabled.build.millis=-DMILLIS_USE_TIMERD0_A0
+atxy4rf.menu.millis.disabled.build.millis=-DDISABLE_MILLIS
+atxy4rf.menu.millis.timera.build.millis=-DMILLIS_USE_TIMERA0
+atxy4rf.menu.millis.timerd.build.millis=-DMILLIS_USE_TIMERD0
+atxy4rf.menu.millis.timerb0.build.millis=-DMILLIS_USE_TIMERB0
+atxy4rf.menu.millis.timerb1.build.millis=-DMILLIS_USE_TIMERB1
+atxy4rf.menu.millis.rtc.build.millis=-DMILLIS_USE_TIMERRTC
+atxy4rf.menu.millis.rtcxtal.build.millis=-DMILLIS_USE_TIMERRTC_XTAL
+
+
+atxy4rf.menu.bodvoltage.1v8=1.8V (5 MHz or less)
+atxy4rf.menu.bodvoltage.2v6=2.6V (10 MHz or less)
+atxy4rf.menu.bodvoltage.4v2=4.2V (20 MHZ or less)
+atxy4rf.menu.bodvoltage.2v1=2.1V (unofficial)
+atxy4rf.menu.bodvoltage.2v9=2.9V (unofficial)
+atxy4rf.menu.bodvoltage.3v3=3.3V (unofficial)
+atxy4rf.menu.bodvoltage.3v7=3.7V (unofficial)
+atxy4rf.menu.bodvoltage.4v0=4.0V (unofficial)
+atxy4rf.menu.bodvoltage.1v8.bootloader.bodlevbits=000
+atxy4rf.menu.bodvoltage.2v6.bootloader.bodlevbits=010
+atxy4rf.menu.bodvoltage.4v2.bootloader.bodlevbits=111
+atxy4rf.menu.bodvoltage.4v0.bootloader.bodlevbits=110
+atxy4rf.menu.bodvoltage.3v7.bootloader.bodlevbits=101
+atxy4rf.menu.bodvoltage.3v3.bootloader.bodlevbits=100
+atxy4rf.menu.bodvoltage.2v9.bootloader.bodlevbits=011
+atxy4rf.menu.bodvoltage.2v1.bootloader.bodlevbits=001
+atxy4rf.menu.bodmodeactive.disabled=Disabled
+atxy4rf.menu.bodmodeactive.enabled=Enabled
+atxy4rf.menu.bodmodeactive.sampled=Sampled
+atxy4rf.menu.bodmodeactive.enabledhold=Enabled hold wakeup
+atxy4rf.menu.bodmodesleep.disabled=Disabled
+atxy4rf.menu.bodmodesleep.enabled=Enabled
+atxy4rf.menu.bodmodesleep.sampled=Sampled
+atxy4rf.menu.bodmodeactive.disabled.bootloader.bodactivebits=00
+atxy4rf.menu.bodmodeactive.enabled.bootloader.bodactivebits=01
+atxy4rf.menu.bodmodeactive.sampled.bootloader.bodactivebits=10
+atxy4rf.menu.bodmodeactive.enabledhold.bootloader.bodactivebits=11
+atxy4rf.menu.bodmodesleep.disabled.bootloader.bodsleepbits=00
+atxy4rf.menu.bodmodesleep.enabled.bootloader.bodsleepbits=01
+atxy4rf.menu.bodmodesleep.sampled.bootloader.bodsleepbits=10
+
+atxy4rf.menu.uartvoltage.5v=Closer to 5v
+atxy4rf.menu.uartvoltage.3v=Closer to 3v
+atxy4rf.menu.uartvoltage.5v.build.uartvoltage=
+atxy4rf.menu.uartvoltage.3v.build.uartvoltage=-DUARTBAUD3V
+
+atxy4rf.upload.tool=pystk500
+
+atxy4rf.build.board=attinyxy4
+atxy4rf.build.core=arduino
+atxy4rf.build.variant=txy4
+atxy4rf.build.extra_flags={build.millis} -DNO_EXTERNAL_I2C_PULLUP {build.uartvoltage} -DMEGA_TINY_NRF24_BOOT
+atxy4rf.compiler.c.elf.extra_flags=-Wl,--defsym,nrf24_status=2 -Wl,--defsym,nrf24_command=4 -Wl,--defsym,nrf24_command_data=4 -Wl,--defsym,nrf24_command_long=6 -Wl,--defsym,nrf24_begin_rx=8 -Wl,--defsym,nrf24_begin_tx=10 -Wl,--defsym,nrf24_read_payload=12 -Wl,--defsym,nrf24_boot_poll=14
+atxy4rf.build.export_merged_output=true
+atxy4rf.upload.workaround=
+atxy4rf.upload.protocol=arduino
+atxy4rf.upload.extra_params=-D
+atxy4rf.build.text_section_start=.text=0x100
 
 ##############################################################
 

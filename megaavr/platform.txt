@@ -144,3 +144,18 @@ tools.avrdude.upload.network_pattern="{network_cmd}" -address {serial.port} -por
 # - from numeric vendor ID, set to Unknown otherwise
 build.usb_manufacturer="Unknown"
 build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
+
+
+
+# pystk500
+
+tools.pystk500.path={runtime.platform.path}
+tools.pystk500.cmd.path={runtime.platform.path}/libraries/megaTinyRF24Boot/extras/writestk500.exe
+tools.pystk500.upload.params.verbose=-v
+tools.pystk500.upload.params.quiet=
+tools.pystk500.upload.params.noverify=
+tools.pystk500.upload.pattern="{cmd.path}" {upload.verbose} -c {serial.port} -b {upload.speed} -f "{build.path}/{build.project_name}.hex"
+tools.pystk500.program.params.verbose=-v
+tools.pystk500.program.params.quiet=
+tools.pystk500.program.params.noverify=
+tools.pystk500.program.pattern="{cmd.path}" {program.verbose} -c {serial.port} -b {upload.speed} -f "{build.path}/{build.project_name}.hex"
